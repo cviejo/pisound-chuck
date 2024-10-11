@@ -1,1 +1,20 @@
-# pisound-chuck
+# Chuck Module for Pisound and Patchbox OS
+
+## Description
+
+[Patchbox OS / Pisound](https://blokas.io/pisound/) module for [Chuck](https://chuck.cs.princeton.edu/).
+
+## Installation
+
+```sh
+patchbox module install https://github.com/cviejo/pisound-chuck
+```
+
+Or if you prefer to build Chuck from source the latest sources:
+
+```sh
+export CHUCK_BUILD=1
+patchbox module install https://github.com/cviejo/pisound-chuck
+```
+
+This will clone the Chuck repository, install necessary dependencies, and build Chuck with JACK support.
