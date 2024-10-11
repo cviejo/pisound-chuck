@@ -1,0 +1,17 @@
+{
+	"name": "chuck",
+	"version": "0.0.1",
+	"description": "pisound chuck module",
+	"author": "cviejo",
+	"depends_on": [
+		"jack.service",
+		{
+			"service": "pisound-btn.service",
+			"config": "pisound-btn.conf"
+		}
+	],
+	"services": [],
+	"scripts": {
+		"install": "install.sh"
+	}
+}
