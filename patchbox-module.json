@@ -5,6 +5,7 @@
 	"author": "cviejo",
 	"depends_on": [
 		"jack.service",
+		"pisound-ctl.service",
 		{
 			"service": "pisound-btn.service",
 			"config": "pisound-btn.conf"
