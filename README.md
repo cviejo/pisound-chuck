@@ -1,4 +1,4 @@
-# Chuck Module for Pisound and Patchbox OS
+# pisound-chuck
 
 ## Description
 
