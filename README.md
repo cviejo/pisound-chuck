@@ -10,7 +10,7 @@
 patchbox module install https://github.com/cviejo/pisound-chuck
 ```
 
-Or if you prefer to build Chuck from source the latest sources:
+Or if you prefer to build Chuck from the latest sources:
 
 ```sh
 export CHUCK_BUILD=1
