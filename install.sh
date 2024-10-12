@@ -21,7 +21,7 @@ if [ "$CHUCK_CHUGINS" = "1" ]; then
 	git clone --recurse-submodules https://github.com/ccrma/chugins.git
 	cd chugins
 	make linux
-	sudo make install
+	make install
 fi
 
 echo "chuck module installed"
