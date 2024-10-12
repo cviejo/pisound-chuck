@@ -2,8 +2,8 @@
 
 . /usr/local/pisound/scripts/common/common.sh
 
-log "Killing all chuck instances!"
-killall chuck 2>/dev/null
+log "killall chuck instances..."
+killall -q chuck || true
 
 chuck -l &
 chuckPID=$!
