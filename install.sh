@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+# TODO: clone the repos in better locations and/or clean them up after installation
+
 if [ "$CHUCK_BUILD" = "1" ]; then
 	git clone https://github.com/ccrma/chuck.git chuck-git
 
