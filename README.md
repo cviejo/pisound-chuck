@@ -18,3 +18,10 @@ patchbox module install https://github.com/cviejo/pisound-chuck
 ```
 
 This will clone the Chuck repository, install necessary dependencies, and build Chuck with JACK support.
+
+If you want to build and install chugins as well, use:
+
+```sh
+export CHUCK_CHUGINS=1
+patchbox module install https://github.com/cviejo/pisound-chuck
+```
