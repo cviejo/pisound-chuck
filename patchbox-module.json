@@ -5,7 +5,6 @@
 	"author": "cviejo",
 	"depends_on": [
 		"jack.service",
-		"pisound-ctl.service",
 		{
 			"service": "pisound-btn.service",
 			"config": "pisound-btn.conf"
@@ -14,6 +13,6 @@
 	"services": [],
 	"scripts": {
 		"install": "install.sh",
-		"launch": "install.sh"
+		"launch": "launch.sh"
 	}
 }
