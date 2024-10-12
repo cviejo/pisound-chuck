@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "pisound chuck module",
 	"author": "cviejo",
+	"launch_mode": "auto",
 	"depends_on": [
 		"jack.service",
 		{
