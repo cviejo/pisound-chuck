@@ -8,6 +8,7 @@
 
 ```sh
 patchbox module install https://github.com/cviejo/pisound-chuck
+patchbox module activate pisound-chuck
 ```
 
 Or if you prefer to build Chuck from the latest sources:
