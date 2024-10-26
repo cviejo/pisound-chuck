@@ -2,6 +2,11 @@
 
 # TODO: clone the repos in better locations and/or clean them up after installation
 
+if [ "$CHUCK_SKIP_INSTALL" = "1" ]; then
+	echo "chuck module installed (skipped)"
+	exit 0
+fi
+
 if [ "$CHUCK_BUILD" = "1" ]; then
 	git clone https://github.com/ccrma/chuck.git chuck-git
 	apt-get install bison flex libasound2-dev libsndfile1-dev libjack-jackd2-dev
