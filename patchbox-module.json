@@ -13,7 +13,7 @@
 	],
 	"services": [],
 	"scripts": {
-		"install": "install.sh",
-		"launch": "launch.sh"
+		"install": "scripts/install.sh",
+		"launch": "scripts/launch.sh"
 	}
 }
