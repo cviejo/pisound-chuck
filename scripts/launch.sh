@@ -2,7 +2,6 @@
 
 . /usr/local/pisound/scripts/common/common.sh
 
-log "killall chuck instances"
 killall -q chuck || true
 
 chuck -l &
