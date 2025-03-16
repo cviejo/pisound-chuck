@@ -4,7 +4,8 @@
 
 killall -q chuck || true
 
-mains=$(find "$HOME/chuck" -name "*main.ck" -type f 2>/dev/null)
+# hardcoded path, since this is run as root
+mains=$(find "/home/patch/chuck" -name "*main.ck" -type f 2>/dev/null)
 
 if [ -z "$mains" ]; then
 	log "No main.ck files found in $HOME/chuck/"

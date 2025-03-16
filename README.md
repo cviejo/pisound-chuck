@@ -41,7 +41,7 @@ patchbox module activate pisound-chuck
 
 ## Scripts
 
-On start `launch.sh` searches recursively in the `$HOME/chuck` directory for any files ending with `main.ck`. This includes both files named exactly `main.ck` and files with prefixes like `midi.main.ck`.
+On start `launch.sh` searches recursively the `/home/patch/chuck` directory for any files ending with `main.ck`. This includes both files named exactly `main.ck` and files with prefixes like `midi.main.ck`.
 
 - If no main.ck files are found, it starts ChucK in server mode (`chuck -l`)
 
