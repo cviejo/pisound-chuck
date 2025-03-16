@@ -18,12 +18,6 @@ if [ -z "$mains" ]; then
 else
 	chuckIds=""
 
-	# Print all main files found
-	echo "Found the following main.ck files:"
-	for main in $mains; do
-		echo "- $main"
-	done
-
 	# Start each main.ck file with a delay between them
 	for main in $mains; do
 		log "Starting $main"
