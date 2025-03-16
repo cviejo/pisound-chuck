@@ -10,22 +10,21 @@ mains=$(find "/home/patch/chuck" -name "*main.ck" -type f 2>/dev/null)
 if [ -z "$mains" ]; then
 	log "No main.ck files found in $HOME/chuck/"
 	chuck -l &
-	chuckPID=$!
+	pid=$!
 	log "chuck listener started"
-	wait_process $chuckPID
+	wait_process $pid
 else
-	chuckIds=""
+	pids=""
 
 	for main in $mains; do
 		log "Starting $main"
 		chuck "$main" &
-		chuckIds="$chuckIds $!"
+		pids="$pids $!"
 		flash_leds 1
 		sleep 0.2
 	done
 
-	# Wait for all chuck processes to finish
-	for pid in $chuckIds; do
+	for pid in $pids; do
 		wait_process "$pid"
 	done
 fi
