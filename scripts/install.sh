@@ -1,18 +1,20 @@
 #!/bin/sh -e
 
-# TODO: clone the repos in better locations and/or clean them up after installation
+src="$HOME/.local/src"
+
+mkdir -p "$src"
 
 if [ "$CHUCK_SKIP_INSTALL" = "1" ]; then
-	echo "chuck module installed (skipped)"
+	echo "chuck module installed (skipped chuck and chugin installation)"
 	exit 0
 fi
 
 if [ "$CHUCK_BUILD" = "1" ]; then
-	if [ ! -d "chuck-git" ]; then
-		git clone https://github.com/ccrma/chuck.git chuck-git
+	if [ ! -d "$src/chuck" ]; then
+		git clone https://github.com/ccrma/chuck.git "$src/chuck"
 	fi
 	apt-get install bison flex libasound2-dev libsndfile1-dev libjack-jackd2-dev
-	cd chuck-git/src/
+	cd "$src/chuck/src/"
 	make linux-jack
 	cp chuck /usr/local/bin
 else
@@ -21,8 +23,8 @@ else
 fi
 
 if [ "$CHUCK_CHUGINS" = "1" ]; then
-	git clone --recurse-submodules https://github.com/ccrma/chugins.git
-	cd chugins
+	git clone --recurse-submodules https://github.com/ccrma/chugins.git "$src/chugins"
+	cd "$src/chugins"
 	make linux
 	make install
 fi
