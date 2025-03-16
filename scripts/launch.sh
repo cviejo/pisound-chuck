@@ -2,13 +2,10 @@
 
 . /usr/local/pisound/scripts/common/common.sh
 
-# Kill any running chuck instances
 killall -q chuck || true
 
-# Find all main.ck files recursively in $HOME/chuck/
 mains=$(find "$HOME/chuck" -name "*main.ck" -type f 2>/dev/null)
 
-# No main files, start in server mode
 if [ -z "$mains" ]; then
 	log "No main.ck files found in $HOME/chuck/"
 	chuck -l &
@@ -18,7 +15,6 @@ if [ -z "$mains" ]; then
 else
 	chuckIds=""
 
-	# Start each main.ck file with a delay between them
 	for main in $mains; do
 		log "Starting $main"
 		chuck "$main" &
