@@ -2,7 +2,7 @@
 
 src="$HOME/.local/src"
 chuginDir="${CHUGIN_DIR:-/usr/local}"
-
+#lala
 mkdir -p "$src"
 
 clone() {
