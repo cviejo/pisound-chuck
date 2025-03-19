@@ -3,6 +3,8 @@
 src="$HOME/.local/src"
 chuginDir="${CHUGIN_DIR:-/usr/local}"
 
+# dummy change
+
 mkdir -p "$src"
 
 clone() {
